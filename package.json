@@ -4,8 +4,10 @@
   "description": "Api for my website to hit a restart URL",
   "main": "app.js",
   "dependencies": {
+    "express": "~4.10.6",
+    "express-winston": "^0.2.9",
     "moment": "~2.8.4",
-    "express": "~4.10.6"
+    "winston": "^0.8.3"
   },
   "devDependencies": {},
   "scripts": {

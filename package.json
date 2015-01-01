@@ -1,0 +1,16 @@
+{
+  "name": "minecraft_api",
+  "version": "0.0.0",
+  "description": "Api for my website to hit a restart URL",
+  "main": "app.js",
+  "dependencies": {
+    "moment": "~2.8.4",
+    "express": "~4.10.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
+}

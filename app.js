@@ -74,7 +74,7 @@ var timeLeftForNextRestart = function(callback) {
 
 var restartServer = function(callback) {
 	var exec = require('child_process').exec;
-	var child = exec('/usr/local/sbin/restart_mcserver_test.sh');
+	var child = exec('/usr/local/sbin/restart_mcserver.sh');
 
 	child.stdout.on('data', function(data) {
 		logger.info("[Child Process] " + data);

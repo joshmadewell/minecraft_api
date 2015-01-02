@@ -1,7 +1,6 @@
 module.exports = function(router, logger) {
 	var Controller = require('./controller');
 	var controller = new Controller(logger);
-	console.log(controller);
 
 	router.post('/getcrankywitit', function(req, res) {
 		logger.info("Request for restart received.");

@@ -1,6 +1,5 @@
 module.exports = function(logger) {
 	var TIME_BETWEEN_RESTARTS = 60 * 30;
-	var logger = null;
 
 	this.timeLeftForNextRestart = function(callback) {
 		logger.info("Checking time since last restart");

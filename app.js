@@ -22,6 +22,7 @@ var logger = new (winston.Logger)({
 	levels: customLevels.levels,
 	transports: [
 		new winston.transports.Console({
+			timestamp: function(time) {return moment(time).format('YYYY-MM-DD HH:mm:ss'); },
 			level: 'debug',
 			colorize: true
 		})
@@ -39,8 +40,10 @@ var crossOriginMiddleware = function(req, res, next) {
 };
 
 var loggerMiddleware = expressWinston.logger({
+	timestamp: true,
 	transports: [
 		new winston.transports.Console({
+			timestamp: function(time) {return moment(time).format('YYYY-MM-DD HH:mm:ss'); },
 			colorize: true
 		})
 	],

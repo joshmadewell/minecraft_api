@@ -41,7 +41,7 @@ var crossOriginMiddleware = function(req, res, next) {
 };
 
 var loggerMiddleware = function(req, res, next) {
-	logger.info("HTTP: " + req.method + " " + req.url + " - - HTTP/" + req.httpVersion);
+	logger.info("HTTP: " + req.method + " - " + res.statusCode + " - " + req.url + " - - HTTP/" + req.httpVersion);
 	next();
 };
 

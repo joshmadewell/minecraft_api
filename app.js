@@ -1,9 +1,8 @@
 var express = require('express');
-var fs = require('fs');
-var moment = require('moment');
 var winston = require('winston');
 var expressWinston = require('express-winston');
 var expressRouter = express.Router();
+
 var customLevels = {
 	levels: {
 		debug: 0,

@@ -1,3 +1,6 @@
+var fs = require('fs');
+var moment = require('moment');
+
 module.exports = function(logger) {
 	var TIME_BETWEEN_RESTARTS = 60 * 30;
 

@@ -41,17 +41,10 @@ var crossOriginMiddleware = function(req, res, next) {
 	next();
 };
 
-var loggerMiddleware = expressWinston.logger({
-	timestamp: true,
-	transports: [
-		new winston.transports.Console({
-			timestamp: function(time) {return moment(time).format('YYYY-MM-DD HH:mm:ss'); },
-			colorize: true
-		})
-	],
-	meta: false,
-	msg: 'HTTP: {{req.method}} {{req.url}} - - HTTP/{{req.httpVersion}}'
-});
+var loggerMiddleware = function(req, res, next) {
+	logger.info("HTTP: " + req.method + " " + req.url + " - - HTTP/" + req.httpVersion);
+	next();
+};
 
 var app = express();
 app.use(crossOriginMiddleware);
